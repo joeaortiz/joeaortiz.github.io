@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="Bundle adjustment, Graph Procssor, IPU, Graphcore">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bundle Adjustment on a Graph Processor</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./../static/css/bulma.min.css">
+  <link rel="stylesheet" href="./../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./../static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./../static/js/fontawesome.all.min.js"></script>
+  <script src="./../static/js/bulma-carousel.min.js"></script>
+  <script src="./../static/js/bulma-slider.min.js"></script>
+  <script src="./../static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Bundle Adjustment on a Graph Processor</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://joeaortiz.github.io/">Joseph Ortiz</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Mark Pupilli<sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://wp.doc.ic.ac.uk/sleutene/about/">Stefan Leutenegger</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.doc.ic.ac.uk/~ajd/">Andrew Davison</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Imperial College London Robot Vision Lab,</span>
+            <span class="author-block"><sup>2</sup>Graphcore</span>
+          </div>
+
+          <div class="is-size-3" style="font-weight: bold">
+            CVPR 2020
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2003.03134.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2003.03134"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=TqeN8aQNgd0"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/joeaortiz/gbp-poplar"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Poplar Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/joeaortiz/gbp"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Python Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Graph processors such as Graphcore’s Intelligence Processing Unit (IPU) 
+            are part of the major new wave of novel
+            computer architecture for AI, and have a general design
+            with massively parallel computation, distributed on-chip
+            memory and very high inter-core communication bandwidth
+            which allows breakthrough performance for message passing algorithms on arbitrary graphs.
+          </p>
+          <p>
+            We show for the first time that the classical computer
+            vision problem of bundle adjustment (BA) can be solved
+            extremely fast on a graph processor using Gaussian Belief Propagation. 
+            Our simple but fully parallel implementation uses the 1216 cores on a single IPU chip to, 
+            for instance, solve a real BA problem with 125 keyframes and
+            1919 points in under 40ms, compared to 1450ms for the
+            Ceres CPU library. Further code optimisation will surely
+            increase this difference on static problems, but we argue
+            that the real promise of graph processing is for flexible inplace optimisation of general, dynamically changing factor
+            graphs representing Spatial AI problems. We give indications of this with experiments showing the ability of GBP to
+            efficiently solve incremental SLAM problems, and deal with
+            robust cost functions and different types of factors.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Abstract. -->
+
+  <!-- Paper video. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-two-thirds">
+      <h2 class="title is-2">Video</h2>
+      <div class="publication-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TqeN8aQNgd0" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @inproceedings{ortiz2020gabp,
+        title={Bundle Adjustment on a Graph Processor},
+        author={Ortiz, Joseph and Pupilli, Mark and Leutenegger, Stefan and Davison, Andrew J},
+        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+        pages={2416--2425},
+        year={2020}
+      }
+</code></pre>
+  </div>
+</section>
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container content">
+    <p>
+      If you're interested, check out my related project:
+    </p>
+
+    <div class='row vspace-top'>
+        <div class="col-sm-1">
+            <img src='./../static/imgs/gbp_ba-cvpr.png' class='img-fluid'>
+        </div>
+
+        <div class="col">
+          <div class='paper-title'>
+              Bundle Adjustment on a Graph Processor
+          </div>
+          <div class='paper-desc'>
+              CVPR 2020
+          </div>
+          <div class='paper-authors'>
+              <u>Joseph Ortiz</u>, Mark Pupilli, Stefan Leutenegger, Andrew J. Davison
+          </div>
+          <div>
+             <a href="https://joeaortiz.github.io/ba_graph_processor.html">[Project Page]</a>  
+             <a href="https://arxiv.org/abs/2003.03134">[Paper]</a>  
+             <a href="https://www.youtube.com/watch?v=TqeN8aQNgd0">[Video]</a>
+             <a href="https://github.com/joeaortiz/gbp-poplar">[Poplar Code]</a>
+             <a href="https://github.com/joeaortiz/gbp">[Python Code]</a>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+ -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://arxiv.org/pdf/2003.03134.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/joeaortiz" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Page adapted from  <a href="https://nerfies.github.io/">here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
