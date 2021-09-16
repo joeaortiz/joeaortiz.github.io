@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="keywords" content="Bundle adjustment, Graph Procssor, IPU, Graphcore">
+  <meta name="keywords" content="Abstraction, SLAM, scene graph">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bundle Adjustment on a Graph Processor</title>
+  <title>Incremental Abstraction in Distributed <br> Probabilistic SLAM Graphs</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -44,36 +44,35 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Bundle Adjustment on a Graph Processor</h1>
+          <h1 class="title is-1 publication-title">Incremental Abstraction in Distributed Probabilistic SLAM Graphs</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://joeaortiz.github.io/">Joseph Ortiz</a><sup>1</sup>,
+              <a href="https://joeaortiz.github.io/">Joseph Ortiz</a>,
             </span>
             <span class="author-block">
-              Mark Pupilli<sup>2</sup>,
+              <a href="http://www.talfanevans.co.uk/mainpage.html">Talfan Evans</a>,
             </span>
             <span class="author-block">
-              <a href="https://wp.doc.ic.ac.uk/sleutene/about/">Stefan Leutenegger</a><sup>1</sup>,
+              Edgar Sucar
             </span>
             <span class="author-block">
-              <a href="https://www.doc.ic.ac.uk/~ajd/">Andrew Davison</a><sup>1</sup>
+              <a href="https://www.doc.ic.ac.uk/~ajd/">Andrew Davison</a>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Imperial College London Robot Vision Lab,</span>
-            <span class="author-block"><sup>2</sup>Graphcore</span>
+            <span class="author-block">Imperial College London Robot Vision Lab</span>
           </div>
 
-          <div class="is-size-3" style="font-weight: bold">
+<!--           <div class="is-size-3" style="font-weight: bold">
             CVPR 2020
-          </div>
+          </div> -->
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2003.03134.pdf"
+                <a href="https://arxiv.org/pdf/2109.06241.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -82,7 +81,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2003.03134"
+                <a href="https://arxiv.org/abs/2109.06241"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -92,32 +91,13 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=TqeN8aQNgd0"
+                <a href="https://www.youtube.com/watch?v=ZoJ9ylb4Ss8"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/joeaortiz/gbp-poplar"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Poplar Code</span>
-                  </a>
-              </span>
-              <span class="link-block">
-                <a href="https://github.com/joeaortiz/gbp"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Python Code</span>
-                  </a>
               </span>
             </div>
 
@@ -138,26 +118,10 @@
         <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Graph processors such as Graphcore’s Intelligence Processing Unit (IPU) 
-            are part of the major new wave of novel
-            computer architecture for AI, and have a general design
-            with massively parallel computation, distributed on-chip
-            memory and very high inter-core communication bandwidth
-            which allows breakthrough performance for message passing algorithms on arbitrary graphs.
+            Scene graphs represent the key components of a scene in a compact and semantically rich way, but are difficult to build during incremental SLAM operation because of the challenges of robustly identifying abstract scene elements and optimising continually changing, complex graphs. We present a distributed, graph-based SLAM framework for incrementally building scene graphs based on two novel components.
           </p>
           <p>
-            We show for the first time that the classical computer
-            vision problem of bundle adjustment (BA) can be solved
-            extremely fast on a graph processor using Gaussian Belief Propagation. 
-            Our simple but fully parallel implementation uses the 1216 cores on a single IPU chip to, 
-            for instance, solve a real BA problem with 125 keyframes and
-            1919 points in under 40ms, compared to 1450ms for the
-            Ceres CPU library. Further code optimisation will surely
-            increase this difference on static problems, but we argue
-            that the real promise of graph processing is for flexible inplace optimisation of general, dynamically changing factor
-            graphs representing Spatial AI problems. We give indications of this with experiments showing the ability of GBP to
-            efficiently solve incremental SLAM problems, and deal with
-            robust cost functions and different types of factors.
+            First, we propose an incremental abstraction framework in which a neural network proposes abstract scene elements that are incorporated into the factor graph of a feature-based monocular SLAM system. Scene elements are confirmed or rejected through optimisation and incrementally replace the points yielding a more dense, semantic and compact representation. Second, enabled by our novel routing procedure, we use Gaussian Belief Propagation (GBP) for distributed inference on a graph processor. The time per iteration of GBP is structure-agnostic and we demonstrate the speed advantages over direct methods for inference of heterogeneous factor graphs. We run our system on real indoor datasets using planar abstractions and recover the major planes with significant compression.
           </p>
         </div>
       </div>
@@ -170,29 +134,26 @@
     <div class="column is-two-thirds">
       <h2 class="title is-2">Video</h2>
       <div class="publication-video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/TqeN8aQNgd0" 
-          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZoJ9ylb4Ss8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </div>
 </section>
 
-
 <section class="section" id="BibTeX">
   <div class="container content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-      @inproceedings{ortiz2020gabp,
-        title={Bundle Adjustment on a Graph Processor},
-        author={Ortiz, Joseph and Pupilli, Mark and Leutenegger, Stefan and Davison, Andrew J},
-        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-        pages={2416--2425},
-        year={2020}
+      @article{ortiz2021abstraction,
+        title={Incremental Abstraction in Distributed Probabilistic SLAM Graphs},
+        author={Ortiz, Joseph and Evans, Talfan and Sucar, Edgar and Davison, Andrew J.},
+        journal={arXiv preprint arXiv:2109.06241},
+        year={2021},
       }
 </code></pre>
   </div>
 </section>
+
 
 <section class="section" id="BibTeX">
   <div class="container content">
@@ -204,7 +165,7 @@
       Also, if you find this work interesting, check out my related projects:
       <ul>
         <li><a href="https://gaussianbp.github.io/">A visual introduction to Gaussian Belief Propagation </a></li>
-        <li><a href="https://joeaortiz.github.io/incremental_abstraction/">Incremental Abstraction in Distributed Probabilistic SLAM Graphs</a></li>
+        <li><a href="https://joeaortiz.github.io/ba_graph_processor/">Bundle Adjustment on a Graph Processor</a></li>
       </ul> 
     </p>
   </div>
@@ -225,6 +186,5 @@
     </div>
   </div>
 </footer>
-
 </body>
 </html>
