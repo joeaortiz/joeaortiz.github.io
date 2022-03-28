@@ -44,7 +44,7 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">iSDF: Real-Time Neural Signed Distance Fields for Robot Perception</h1>
+          <h1 class="title is-1 publication-title">iSDF: Real-Time Neural Signed Distance Fields <br>for Robot Perception</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://joeaortiz.github.io/">Joseph Ortiz</a><sup>1,2</sup>&emsp;
@@ -125,12 +125,33 @@
 <section class="section">
   <div class="container">
 
-  <!-- Teaser -->
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-two-thirds">
-      <img src='../static/imgs/isdf.gif' class='img-fluid' id='portrait'>
-  </div>
-  </div>
+    <!-- Results sneak peak -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <div class="row">
+          <div class="column" style="width: 50%; float: left">
+            <p style="font-weight: bold">
+              ReplicaCAD sequence
+            </p>
+            <br>
+            <video controls>
+              <source src="../static/imgs/isdf/replicaCAD.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="column" style="width: 50%; float: left">
+            <p style="font-weight: bold">
+              ScanNet sequence
+            </p>
+            <br>
+            <video controls>
+              <source src="../static/imgs/isdf/scanNet.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -148,6 +169,14 @@
     </div>
   </div>
   <!--/ Abstract. -->
+  <br><br>
+
+  <!-- Teaser -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-two-thirds">
+      <img src='../static/imgs/isdf/isdf.gif' class='img-fluid' id='portrait'>
+    </div>
+  </div>
 
   <!-- Paper video. -->
   <div class="columns is-centered has-text-centered">
@@ -159,12 +188,60 @@
     </div>
   </div>
 
-<!--   <div class="columns is-centered has-text-centered">
+  <!-- Method -->
+  <div class="columns is-centered has-text-centered">
     <div class="column is-two-thirds">
-      <h2 class="title is-2">Results</h2>
+      <h2 class="title is-2">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            iSDF is a system for real-time SDF reconstruction that takes as input a stream  posed depth images captured by a moving camera and, during online operation, learns a function that approximates the true signed distance field of the environment. The signed distance function is modelled by a multilayer perceptron (MLP), that maps a 3D coordinate to the signed distance value at that point. The model is initialised with random weights and is optimised in real-time with respect to incoming measurements.
+          </p>
+        </div>
 
+      <img src='../static/imgs/isdf/system_diagram.png' class='img-fluid' id='portrait' style="width: 60%">
     </div>
-  </div> -->
+  </div>
+
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-two-thirds">
+      <h2 class="title is-2">More Results</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Here we show results comparing iSDF to prior work <a href="https://voxblox.readthedocs.io/en/latest/">Voxblox</a> and KinectFusion+. KinectFusion+ is our own baseline implementation that combines KinectFusion with GPU based wavefront propagation.
+          </p>
+          <p>
+            We evaluate on sequences generated from the <a href="https://aihabitat.org/datasets/replica_cad/">ReplicaCAD</a> dataset and <a href="http://www.scan-net.org/">ScanNet</a> sequences.
+          </p>
+        </div>
+
+        <div class="content has-text-justified">
+          <h3 class="title is-5">SDF Slices</h3>
+          <p>
+            Here we show slices at constant height of the reconstructed SDF at the end of the sequence. iSDF is the only method that can make predictions outside of the visible region (greyed for other methods) while Voxblox also have significant gaps (shown by the red boxes).
+          </p>
+        </div>
+        <img src='../static/imgs/isdf/main_slices.png' class='img-fluid' id='portrait'>
+        <br><br>
+
+        <div class="content has-text-justified">
+          <h3 class="title is-5">Zero level sets</h3>
+          <p>
+            Surface meshes are produced by querying the predicted SDF on a uniform grid and then running marching cubes to find the zero crossing level set. iSDF is the only method to produces a complete and denoised mesh. 
+          </p>
+        </div>
+        <img src='../static/imgs/isdf/level_sets.png' class='img-fluid' id='portrait'>
+        <br><br>
+
+        <div class="content has-text-justified">
+          <h3 class="title is-5">Quantitative Results</h3>
+          <p>
+            iSDF reconstructs the most accurate signed distance fields, acheiving an SDF error less than 6cm for all sequences. iSDF also gives better approximations of collision costs and gradients demonstrating its utility for downstream planners in both navigation and manipulation. 
+          </p>
+        </div>
+        <img src='../static/imgs/isdf/main_seqs.png' class='img-fluid' id='portrait'>
+    </div>
+  </div>
 
 </section>
 
