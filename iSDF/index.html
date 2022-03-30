@@ -134,7 +134,7 @@
               ReplicaCAD sequence
             </p>
             <br>
-            <video controls>
+            <video controls autoplay="autoplay" muted>
               <source src="../static/imgs/isdf/replicaCAD.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -144,7 +144,7 @@
               ScanNet sequence
             </p>
             <br>
-            <video controls>
+            <video controls autoplay="autoplay" muted>
               <source src="../static/imgs/isdf/scanNet.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -231,6 +231,21 @@
           </p>
         </div>
         <img src='../static/imgs/isdf/level_sets.png' class='img-fluid' id='portrait'>
+        <br><br>
+
+        <div class="content has-text-justified">
+          <h3 class="title is-5">Positive characteristics of iSDF</h3>
+          <p>
+             <b>Left</b>: Although the camera is mounted at a fixed height, iSDF can reconstruct a plausible SDF at floor level which is only partially observed. 
+          </p>
+          <p>
+             <b>Middle</b>: The scene is viewed from the green arrow. Despite only observing the nearside of the beanbag, iSDF can sensibly complete the backside of the object. This is in constrast to prior work which is not predictive.
+          </p>
+          <p>
+             <b>Right</b>: The camera approaches close to a salt shaker as if it intends to manipulate it. iSDF is the only method that can operate at multiple levels of detail and reconstruct both at room scale and at the scale of small objects.
+          </p>
+        </div>
+        <img src='../static/imgs/isdf/fill_in.png' class='img-fluid' id='portrait'>
         <br><br>
 
         <div class="content has-text-justified">
