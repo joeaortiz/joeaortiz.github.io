@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="Bundle adjustment, Decentralized">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DABA</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./../static/css/bulma.min.css">
+  <link rel="stylesheet" href="./../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./../static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./../static/js/fontawesome.all.min.js"></script>
+  <script src="./../static/js/bulma-carousel.min.js"></script>
+  <script src="./../static/js/bulma-slider.min.js"></script>
+  <script src="./../static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">DABA: Decentralized and Accelerated Large-Scale Bundle Adjustment</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Taosha Fan<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://joeaortiz.github.io/">Joseph Ortiz</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              Ming Hsiao<sup>3</sup>,
+            </span>
+            <span class="author-block">
+              Maurizio Monge<sup>3</sup>,
+            </span>
+            <span class="author-block">
+              Jing Dong<sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/murphey-todd.html">Todd Murphy</a><sup>4</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://www.mustafamukadam.com/">Mustafa Mukadam</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Meta AI</span>, 
+            <span class="author-block"><sup>2</sup>Imperial College London</span>, 
+            <span class="author-block"><sup>3</sup>Reality Labs Research</span>, 
+            <span class="author-block"><sup>4</sup>Northwestern University</span>
+          </div>
+
+          <div class="is-size-3" style="font-weight: bold">
+            RSS 2023
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://www.roboticsproceedings.org/rss19/p111.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2305.07026"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/live/0-WXg0hH5Co?feature=share&t=7282"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/facebookresearch/DABA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          Scaling to arbitrarily large bundle adjustment problems requires data and compute to be distributed across multiple devices. Centralized methods in prior works are only able to solve small or medium size problems due to overhead in computation and communication. In this paper, we present a fully decentralized method that alleviates computation and communication bottlenecks to solve arbitrarily large bundle adjustment problems. We achieve this by reformulating the reprojection error and deriving a novel surrogate function that decouples optimization variables from different devices. This function makes it possible to use majorization minimization techniques and reduces bundle adjustment to independent optimization subproblems that can be solved in parallel. We further apply Nesterov's acceleration and adaptive restart to improve convergence while maintaining its theoretical guarantees. Despite limited peer-to-peer communication, our method has provable convergence to first-order critical points under mild conditions. On extensive benchmarks with public datasets, our method converges much faster than decentralized baselines with similar memory usage and communication load. Compared to centralized baselines using a single device, our method, while being decentralized, yields more accurate solutions with significant speedups of up to 953.7x over Ceres and 174.6x over DeepLM. 
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Abstract. -->
+
+  <!-- Paper video. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-two-thirds">
+      <h2 class="title is-2">Video</h2>
+      <div class="publication-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0-WXg0hH5Co?start=7282" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @inproceedings{Ortiz:etal:iSDF2022,
+        title={Decentralization and Acceleration Enables Large-Scale Bundle Adjustment},
+        author={Fan, Taosha and Ortiz, Joseph and Hsiao, Ming and Monge, Maurizio and Dong, Jing and Murphey, Todd and Mukadam, Mustafa},
+        booktitle={Robotics: Science and Systems},
+        year={2023}
+      }
+</code></pre>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="title">Contact</h2>
+    <p>  
+      If you have any questions, please feel free to reach out to <a href = "mailto: taoshaf@meta.com">Taosha Fan</a> or <a href = "mailto: joeaortiz16@gmail.com">Joe Ortiz</a>.
+    </p>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Page adapted from  <a href="https://nerfies.github.io/">here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
