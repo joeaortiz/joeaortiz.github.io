@@ -1,505 +1,557 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Joe Ortiz</title>
+  <title>Joe Ortiz</title>
 
-    <!-- Meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link href="./static/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="./static/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom Styles -->
-    <style>
-          body {
-            font-family: 'sans-serif';
-            font-size: 15px;
-            background-color: #FFFFFF;
-            color: #4F6071;
-          }
-          #header {
-            background-color: #f4f4f4;
-            /*background-color: #FFFFFF;*/
-            display: flex;
-            align-items: flex-end;
-            padding-top:60px;
-            padding-bottom:60px;
-          }
-          #footer {
-            background-color: #FFFFFF;
-            padding:60px;
-          }
-          #portrait {
-            border: 3px solid white;
-          }
-          #header-text {
-            margin-top: 60px;
-            margin-left: 220px;
-          }
-          #header-text-name {
-            font-size: 40px;
-          }
-          #header-text-email {
-            font-size: 20px;
-            font-style: italic;
-          }
-          .header-text-desc {
-            font-size: 20px;
-          }
-          .vspace-top {
-            margin-top: 30px;
-          }
-          .vspace-top-news {
-              margin-top: 15px;
-          }
-          .paper-image {
-            width: 150px;
-          }
-          .news-date {
-              font-weight: bold;
-          }
-          .paper-title {
-            font-weight: bold;
-          }
-          .paper-authors {
-            font-style: italic;
-          }
-          .paper-desc {
-            font-style: normal;
-            color: #1520A6;;
-          }
-    </style>
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'sans-serif';
+      font-size: 15px;
+      background-color: #FFFFFF;
+      color: #4F6071;
+    }
+
+    #header {
+      background-color: #f4f4f4;
+      /*background-color: #FFFFFF;*/
+      display: flex;
+      align-items: flex-end;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    #footer {
+      background-color: #FFFFFF;
+      padding: 60px;
+    }
+
+    #portrait {
+      border: 3px solid white;
+    }
+
+    #header-text {
+      margin-top: 60px;
+      margin-left: 220px;
+    }
+
+    #header-text-name {
+      font-size: 40px;
+    }
+
+    #header-text-email {
+      font-size: 20px;
+      font-style: italic;
+    }
+
+    .header-text-desc {
+      font-size: 20px;
+    }
+
+    .vspace-top {
+      margin-top: 30px;
+    }
+
+    .vspace-top-news {
+      margin-top: 15px;
+    }
+
+    .paper-image {
+      width: 150px;
+    }
+
+    .news-date {
+      font-weight: bold;
+    }
+
+    .paper-title {
+      font-weight: bold;
+    }
+
+    .paper-authors {
+      font-style: italic;
+    }
+
+    .paper-desc {
+      font-style: normal;
+      color: #1520A6;
+      ;
+    }
+  </style>
 </head>
 
 <body>
-    <div id='header'>
-        <div class='container'>
-            <div class='row'>
-                <div class="col-sm-3 offset-sm-1">
-                    <img src='./static/imgs/portrait.jpg' class='img-fluid' id='portrait'>
-                </div>
-
-                <div class="col">
-                  <div id='header-text-name'>
-                      Joe Ortiz
-                  </div>
-                  <div id='header-text-email'>
-                    joeaortiz16@gmail.com
-                  </div>
-                  <div>
-                    <a href="https://github.com/joeaortiz">[GitHub]</a>
-                    <a href="https://scholar.google.com/citations?user=pea9lz0AAAAJ&hl=en">[Google Scholar]</a>
-                    <a href="https://www.linkedin.com/in/joseph-ortiz-620709130/">[LinkedIn]</a>
-                    <a href="https://twitter.com/joeaortiz">[Twitter]</a>
-                    <!-- <a href="https://joeaortiz.github.io/static/CV.pdf">[CV]</a> -->
-                  </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
+  <div id='header'>
     <div class='container'>
+      <div class='row'>
+        <div class="col-sm-3 offset-sm-1">
+          <img src='./static/imgs/portrait.jpg' class='img-fluid' id='portrait'>
+        </div>
+
+        <div class="col">
+          <div id='header-text-name'>
+            Joe Ortiz
+          </div>
+          <div id='header-text-email'>
+            joeortiz@google.com
+          </div>
+          <div>
+            <a href="https://github.com/joeaortiz">[GitHub]</a>
+            <a href="https://scholar.google.com/citations?user=pea9lz0AAAAJ&hl=en">[Google Scholar]</a>
+            <a href="https://www.linkedin.com/in/joseph-ortiz-620709130/">[LinkedIn]</a>
+            <a href="https://twitter.com/joeaortiz">[Twitter]</a>
+            <!-- <a href="https://joeaortiz.github.io/static/CV.pdf">[CV]</a> -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class='container'>
+    <div class='row vspace-top'>
+      <div class='col offset-sm-1'>
+        <p>
+          I am a Senior Research Scientist at Google DeepMind working on world models.
+          Before that, I was a postdoc at Meta AI (FAIR) working on 3D perception for robotics.
+          My recent research focus is on generative world models that can be used for reasoning and planning across
+          long horizons.
+          I'm interested in ways to make world models that are real-time and consistent by leveraging efficient
+          abstractions including 3D.
+        </p>
+
+        <p>
+          I graduated from my PhD at Imperial College London in 2023, advised by <a
+            href="https://www.doc.ic.ac.uk/~ajd/">Prof. Andrew Davison</a>.
+          There my work focused on 1) graphical representations and distributed inference algorithms on
+          graphs, and 2) training neural scene representations via continual learning for real-time robotics.
+          I completed my undergraduate and Masters in Physics at the University of Oxford.
+        </p>
+
+        <div class='vspace-top'>
+          <h1>Publications</h1>
+        </div>
+
+        <!--- List of publications --->
+
         <div class='row vspace-top'>
-            <div class='col offset-sm-1'>
-                <h1>Bio</h1>
-                <p>
-                  I am a Research Scientist at Google DeepMind. Before that, I was a postdoc at Meta AI (FAIR) working on real-time 3D scene understanding for robotics.
-                  I graduated from my PhD at Imperial College London in 2023, advised by <a href="https://www.doc.ic.ac.uk/~ajd/">Prof. Andrew Davison</a>.
-                  I completed my undergraduate and Masters in Physics at the University of Oxford.
-                </p>
+          <div class="col-sm-3">
+            <img src='./static/imgs/twm.png' class='img-fluid'>
+          </div>
 
-                <p>
-                  My research interests are in building efficient scene understanding and planning systems for robotics. 
-				  Towards this goal, my work has focused on 1) graphical representations and distributed inference algorithms on graphs, and 2) training neural scene representations via continual learning for real-time robotics.
-                </p>
+          <div class="col">
+            <div class='paper-title'>
+              Improving Transformer World Models for Data-Efficient RL
+            </div>
+            <div class='paper-desc'>
+              ICML 2025
+            </div>
+            <div class='paper-authors'>
+              Antoine Dedieu*, <b>Joseph Ortiz*</b>, Xinghua Lou, Carter Wendelken, Wolfgang Lehrach, J Swaroop
+              Guntupalli, Miguel Lazaro-Gredilla, Kevin Patrick Murphy
+            </div>
+            <div>
+              <a href="https://arxiv.org/abs/2502.01591">[Paper]</a>
+            </div>
+          </div>
+        </div>
 
-                <div class='vspace-top'>
-                    <h1>Publications</h1>
-                </div>
+        <div class='row vspace-top'>
+          <div class="col-sm-3">
+            <img src='./static/imgs/dmcvb.png' class='img-fluid'>
+          </div>
 
-                <!--- List of publications --->
+          <div class="col">
+            <div class='paper-title'>
+              DMC-VB: A Benchmark for Representation Learning for Control with Visual Distractors
+            </div>
+            <div class='paper-desc'>
+              NeurIPS 2024
+            </div>
+            <div class='paper-authors'>
+              <b>Joseph Ortiz</b>, Antoine Dedieu, Wolfgang Lehrach, Swaroop Guntupalli, Carter Wendelken, Ahmad
+              Humayun, Guangyao Zhou, Sivaramakrishnan Swaminathan, Miguel Lázaro-Gredilla, Kevin Murphy
+            </div>
+            <div>
+              <a href="https://arxiv.org/abs/2409.18330">[Paper]</a>
+              <a href="https://github.com/google-deepmind/dmc_vision_benchmark">[Code/Data]</a>
+            </div>
+          </div>
+        </div>
 
-                <div class='row vspace-top'>
-                  <div class="col-sm-3">
-                      <img src='./static/imgs/dmcvb.png' class='img-fluid'>
-                  </div>
+        <div class='row vspace-top'>
+          <div class="col-sm-3">
+            <img src='./static/imgs/dmpc.png' class='img-fluid'>
+          </div>
 
-                  <div class="col">
-                    <div class='paper-title'>
-					  DMC-VB: A Benchmark for Representation Learning for Control with Visual Distractors
-                    </div>
-                    <div class='paper-desc'>
-                        NeurIPS 2024
-                    </div>
-                    <div class='paper-authors'>
-					  <b>Joseph Ortiz</b>, Antoine Dedieu, Wolfgang Lehrach, Swaroop Guntupalli, Carter Wendelken, Ahmad Humayun, Guangyao Zhou, Sivaramakrishnan Swaminathan, Miguel Lázaro-Gredilla, Kevin Murphy
-                    </div>
-                    <div>
-                      <a href="https://arxiv.org/abs/2409.18330">[Paper]</a>
-                      <a href="https://github.com/google-deepmind/dmc_vision_benchmark">[Code/Data]</a>
-                    </div>
-                  </div>
-                </div>
-				
-                <div class='row vspace-top'>
-                  <div class="col-sm-3">
-                      <img src='./static/imgs/dmpc.png' class='img-fluid'>
-                  </div>
+          <div class="col">
+            <div class='paper-title'>
+              Diffusion Model Predictive Control
+            </div>
+            <div class='paper-desc'>
+              ArXiv 2024
+            </div>
+            <div class='paper-authors'>
+              Guangyao Zhou, Sivaramakrishnan Swaminathan, Rajkumar Vasudeva Raju, J Swaroop Guntupalli, Wolfgang
+              Lehrach, <b>Joseph Ortiz</b>, Antoine Dedieu, Miguel Lázaro-Gredilla, Kevin Murphy
+            </div>
+            <div>
+              <a href="https://arxiv.org/abs/2410.05364">[Paper]</a>
+            </div>
+          </div>
+        </div>
 
-                  <div class="col">
-                    <div class='paper-title'>
-					  Diffusion Model Predictive Control
-                    </div>
-                    <div class='paper-desc'>
-                        ArXiv 2024
-                    </div>
-                    <div class='paper-authors'>
-					  Guangyao Zhou, Sivaramakrishnan Swaminathan, Rajkumar Vasudeva Raju, J Swaroop Guntupalli, Wolfgang Lehrach, <b>Joseph Ortiz</b>, Antoine Dedieu, Miguel Lázaro-Gredilla, Kevin Murphy
-                    </div>
-                    <div>
-                      <a href="https://arxiv.org/abs/2410.05364">[Paper]</a>
-                    </div>
-                  </div>
-                </div>
+        <div class='row vspace-top'>
+          <div class="col-sm-3">
+            <img src='./static/imgs/tvl.png' class='img-fluid'>
+          </div>
 
-                <div class='row vspace-top'>
-                  <div class="col-sm-3">
-                      <img src='./static/imgs/tvl.png' class='img-fluid'>
-                  </div>
+          <div class="col">
+            <div class='paper-title'>
+              A Touch, Vision, and Language Dataset for Multimodal Alignment
+            </div>
+            <div class='paper-desc'>
+              ICML 2024
+            </div>
+            <div class='paper-authors'>
+              Letian Fu, Gaurav Datta, Huang Huang, William Chung-Ho Panitch, Jaimyn Drake, <b>Joseph Ortiz</b>, Mustafa
+              Mukadam, Mike Lambeta, Roberto Calandra, Ken Goldberg
+            </div>
+            <div>
+              <a href="https://tactile-vlm.github.io/">[Project Page]</a>
+              <a href="https://arxiv.org/abs/2402.13232">[Paper]</a>
+              <a href="https://github.com/Max-Fu/tvl">[Code]</a>
+              <a href="https://huggingface.co/datasets/mlfu7/Touch-Vision-Language-Dataset">[Dataset]</a>
+              <a href="https://huggingface.co/mlfu7/Touch-Vision-Language-Models">[Models]</a>
+            </div>
+          </div>
+        </div>
 
-                  <div class="col">
-                    <div class='paper-title'>
-					  A Touch, Vision, and Language Dataset for Multimodal Alignment
-                    </div>
-                    <div class='paper-desc'>
-                        ICML 2024
-                    </div>
-                    <div class='paper-authors'>
-					  Letian Fu, Gaurav Datta, Huang Huang, William Chung-Ho Panitch, Jaimyn Drake, <b>Joseph Ortiz</b>, Mustafa Mukadam, Mike Lambeta, Roberto Calandra, Ken Goldberg
-                    </div>
-                    <div>
-                      <a href="https://tactile-vlm.github.io/">[Project Page]</a>
-                      <a href="https://arxiv.org/abs/2402.13232">[Paper]</a>
-                      <a href="https://github.com/Max-Fu/tvl">[Code]</a>
-                      <a href="https://huggingface.co/datasets/mlfu7/Touch-Vision-Language-Dataset">[Dataset]</a>
-                      <a href="https://huggingface.co/mlfu7/Touch-Vision-Language-Models">[Models]</a>
-                    </div>
-                  </div>
-                </div>
+        <div class='row vspace-top'>
+          <div class="col-sm-3">
+            <img src='./static/imgs/neural_feels.png' class='img-fluid'>
+          </div>
 
-                <div class='row vspace-top'>
-                  <div class="col-sm-3">
-                      <img src='./static/imgs/neural_feels.png' class='img-fluid'>
-                  </div>
+          <div class="col">
+            <div class='paper-title'>
+              Neural feels with neural fields: Visuo-tactile perception for in-hand manipulation
+            </div>
+            <div class='paper-desc'>
+              Science Robotics 2024
+            </div>
+            <div class='paper-authors'>
+              Sudharshan Suresh, Haozhi Qi, Tingfan Wu, Taosha Fan, Luis Pineda, Mike Lambeta, Jitendra Malik, Mrinal
+              Kalakrishnan, Roberto Calandra, Michael Kaess, <b>Joseph Ortiz</b>, Mustafa Mukadam
+            </div>
+            <div>
+              <a href="https://suddhu.github.io/neural-feels/">[Project Page]</a>
+              <a href="https://www.science.org/doi/10.1126/scirobotics.adl0628">[Paper]</a>
+              <a href="https://arxiv.org/abs/2312.13469">[ArXiv]</a>
+              <a href="https://www.youtube.com/watch?v=KOHh0awhSEg">[Video]</a>
+            </div>
+          </div>
+        </div>
 
-                  <div class="col">
-                    <div class='paper-title'>
-					  Neural feels with neural fields: Visuo-tactile perception for in-hand manipulation
-                    </div>
-                    <div class='paper-desc'>
-                        Science Robotics 2024
-                    </div>
-                    <div class='paper-authors'>
-                      Sudharshan Suresh, Haozhi Qi, Tingfan Wu, Taosha Fan, Luis Pineda, Mike Lambeta, Jitendra Malik, Mrinal Kalakrishnan, Roberto Calandra, Michael Kaess, <b>Joseph Ortiz</b>, Mustafa Mukadam
-                    </div>
-                    <div>
-                      <a href="https://suddhu.github.io/neural-feels/">[Project Page]</a>
-                      <a href="https://www.science.org/doi/10.1126/scirobotics.adl0628">[Paper]</a>
-                      <a href="https://arxiv.org/abs/2312.13469">[ArXiv]</a>
-                      <a href="https://www.youtube.com/watch?v=KOHh0awhSEg">[Video]</a>
-                    </div>
-                  </div>
-                </div>
+        <div class='row vspace-top'>
+          <div class="col-sm-3">
+            <img src='./static/imgs/ext_contact.png' class='img-fluid'>
+          </div>
 
-                <div class='row vspace-top'>
-                  <div class="col-sm-3">
-                      <img src='./static/imgs/ext_contact.png' class='img-fluid'>
-                  </div>
+          <div class="col">
+            <div class='paper-title'>
+              Perceiving Extrinsic Contacts from Touch Improves Learning Insertion Policies
+            </div>
+            <div class='paper-desc'>
+              ArXiv 2023
+            </div>
+            <div class='paper-authors'>
+              Carolina Higuera, <b>Joseph Ortiz</b>, Haozhi Qi, Luis Pineda, Byron Boots, Mustafa Mukadam
+            </div>
+            <div>
+              <a href="https://arxiv.org/abs/2309.16652">[Paper]</a>
+              <a href="https://www.youtube.com/watch?v=rG_xIfQ6-_k">[Video]</a>
+              <a href="https://github.com/carolinahiguera/NCF-Policy">[Code]</a>
+            </div>
+          </div>
+        </div>
 
-                  <div class="col">
-                    <div class='paper-title'>
-                      Perceiving Extrinsic Contacts from Touch Improves Learning Insertion Policies
-                    </div>
-                    <div class='paper-desc'>
-                        ArXiv 2023
-                    </div>
-                    <div class='paper-authors'>
-                      Carolina Higuera, <b>Joseph Ortiz</b>, Haozhi Qi, Luis Pineda, Byron Boots, Mustafa Mukadam
-                    </div>
-                    <div>
-                      <a href="https://arxiv.org/abs/2309.16652">[Paper]</a>
-                      <a href="https://www.youtube.com/watch?v=rG_xIfQ6-_k">[Video]</a>
-                      <a href="https://github.com/carolinahiguera/NCF-Policy">[Code]</a>
-                    </div>
-                  </div>
-                </div>
+        <div class='row vspace-top'>
+          <div class="col-sm-3">
+            <img src='./static/imgs/daba.png' class='img-fluid'>
+          </div>
 
-                <div class='row vspace-top'>
-                  <div class="col-sm-3">
-                      <img src='./static/imgs/daba.png' class='img-fluid'>
-                  </div>
+          <div class="col">
+            <div class='paper-title'>
+              Decentralization and Acceleration Enables Large-Scale Bundle Adjustment
+            </div>
+            <div class='paper-desc'>
+              RSS 2023
+            </div>
+            <div class='paper-authors'>
+              Taosha Fan, <b>Joseph Ortiz</b>, Ming Hsiao, Maurizio Monge, Jing Dong, Todd Murphey, Mustafa Mukadam
+            </div>
+            <div>
+              <a href="https://joeaortiz.github.io/daba/">[Project Page]</a>
+              <a href="https://arxiv.org/abs/2305.07026">[Paper]</a>
+              <a href="https://www.youtube.com/watch?v=0-WXg0hH5Co&t=7282s">[Video]</a>
+              <a href="https://github.com/facebookresearch/DABA">[Code]</a>
+            </div>
+          </div>
+        </div>
 
-                  <div class="col">
-                    <div class='paper-title'>
-                      Decentralization and Acceleration Enables Large-Scale Bundle Adjustment
-                    </div>
-                    <div class='paper-desc'>
-                        RSS 2023
-                    </div>
-                    <div class='paper-authors'>
-                      Taosha Fan, <b>Joseph Ortiz</b>, Ming Hsiao, Maurizio Monge, Jing Dong, Todd Murphey, Mustafa Mukadam
-                    </div>
-                    <div>
-                      <a href="https://joeaortiz.github.io/daba/">[Project Page]</a>
-                      <a href="https://arxiv.org/abs/2305.07026">[Paper]</a>
-                      <a href="https://www.youtube.com/watch?v=0-WXg0hH5Co&t=7282s">[Video]</a>
-                      <a href="https://github.com/facebookresearch/DABA">[Code]</a>
-                    </div>
-                  </div>
-                </div>
+        <div class='row vspace-top'>
+          <div class="col-sm-3">
+            <img src='./static/imgs/imperial.png' class='img-fluid'>
+          </div>
 
-                  <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img src='./static/imgs/imperial.png' class='img-fluid'>
-                    </div>
+          <div class="col">
+            <div class='paper-title'>
+              Gaussian Belief Propagation for Real-Time Decentralised Inference
+            </div>
+            <div class='paper-desc'>
+              PhD Thesis
+            </div>
+            <div class='paper-authors'>
+              Joseph Ortiz
+            </div>
+            <div>
+              <a href="https://joeaortiz.github.io/static/phd_thesis.pdf">[pdf]</a>
+            </div>
+          </div>
+        </div>
 
-                    <div class="col">
-                      <div class='paper-title'>
-                          Gaussian Belief Propagation for Real-Time Decentralised Inference
-                      </div>
-                      <div class='paper-desc'>
-                          PhD Thesis
-                      </div>
-                      <div class='paper-authors'>
-                          Joseph Ortiz
-                      </div>
-                      <div>
-                        <a href="https://joeaortiz.github.io/static/phd_thesis.pdf">[pdf]</a>
-                      </div>
-                    </div>
-                  </div>
+        <div class='row vspace-top'>
+          <div class="col-sm-3">
+            <img src='./static/imgs/theseus.png' class='img-fluid'>
+          </div>
 
-                  <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img src='./static/imgs/theseus.png' class='img-fluid'>
-                    </div>
+          <div class="col">
+            <div class='paper-title'>
+              Theseus: A Library for Differentiable Nonlinear Optimization
+            </div>
+            <div class='paper-desc'>
+              NeurIPS 2022
+            </div>
+            <div class='paper-authors'>
+              Luis Pineda, Taosha Fan, Maurizio Monge, Shobha Venkataraman, Paloma Sodhi, <br>
+              Ricky Chen, <b>Joseph Ortiz</b>, Daniel DeTone, Austin Wang, Stuart Anderson, <br>
+              Jing Dong, Brandon Amos, Mustafa Mukadam
+            </div>
+            <div>
+              <a href="https://sites.google.com/view/theseus-ai/">[Project Page]</a>
+              <a href="https://arxiv.org/abs/2207.09442">[Paper]</a>
+              <a href="https://github.com/facebookresearch/theseus">[Code]</a>
+            </div>
+          </div>
+        </div>
 
-                    <div class="col">
-                      <div class='paper-title'>
-                          Theseus: A Library for Differentiable Nonlinear Optimization
-                      </div>
-                      <div class='paper-desc'>
-                          NeurIPS 2022
-                      </div>
-                      <div class='paper-authors'>
-                          Luis Pineda, Taosha Fan, Maurizio Monge, Shobha Venkataraman, Paloma Sodhi, <br>
-                          Ricky Chen, <b>Joseph Ortiz</b>, Daniel DeTone, Austin Wang, Stuart Anderson, <br>
-                          Jing Dong, Brandon Amos, Mustafa Mukadam
-                      </div>
-                      <div>
-                        <a href="https://sites.google.com/view/theseus-ai/">[Project Page]</a>
-                        <a href="https://arxiv.org/abs/2207.09442">[Paper]</a>
-                        <a href="https://github.com/facebookresearch/theseus">[Code]</a>
-                      </div>
-                    </div>
-                  </div>
+        <div class='row vspace-top'>
+          <div class="col-sm-3">
+            <img src='./static/imgs/isdf/isdf.png' class='img-fluid'>
+          </div>
 
-                  <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img src='./static/imgs/isdf/isdf.png' class='img-fluid'>
-                    </div>
+          <div class="col">
+            <div class='paper-title'>
+              iSDF: Real-Time Neural Signed Distance Fields for Robot Perception
+            </div>
+            <div class='paper-desc'>
+              RSS 2022
+            </div>
+            <div class='paper-authors'>
+              <b>Joseph Ortiz</b>, Alexander Clegg, Jing Dong, Edgar Sucar, David Novotny,<br> Michael Zollhoefer,
+              Mustafa Mukadam
+            </div>
+            <div>
+              <a href="https://joeaortiz.github.io/iSDF/">[Project Page]</a>
+              <a href="https://arxiv.org/abs/2204.02296">[Paper]</a>
+              <a href="https://github.com/facebookresearch/iSDF">[Code]</a>
+              <a href="https://www.youtube.com/watch?v=mAKGl1wBSic">[Video]</a>
+            </div>
+          </div>
+        </div>
 
-                    <div class="col">
-                      <div class='paper-title'>
-                          iSDF: Real-Time Neural Signed Distance Fields for Robot Perception
-                      </div>
-                      <div class='paper-desc'>
-                          RSS 2022
-                      </div>
-                      <div class='paper-authors'>
-                          <b>Joseph Ortiz</b>, Alexander Clegg, Jing Dong, Edgar Sucar, David Novotny,<br> Michael Zollhoefer, Mustafa Mukadam
-                      </div>
-                      <div>
-                        <a href="https://joeaortiz.github.io/iSDF/">[Project Page]</a>
-                        <a href="https://arxiv.org/abs/2204.02296">[Paper]</a>
-                        <a href="https://github.com/facebookresearch/iSDF">[Code]</a>
-                        <a href="https://www.youtube.com/watch?v=mAKGl1wBSic">[Video]</a>
-                      </div>
-                    </div>
-                  </div>
+        <div class='row vspace-top'>
+          <div class="col-sm-3">
+            <img src='./static/imgs/robotweb.png' class='img-fluid'>
+          </div>
 
-                  <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img src='./static/imgs/robotweb.png' class='img-fluid'>
-                    </div>
+          <div class="col">
+            <div class='paper-title'>
+              A Robot Web for Distributed Many-Device Localisation
+            </div>
+            <div class='paper-desc'>
+              TRO 2022
+            </div>
+            <div class='paper-authors'>
+              Riku Murai, <b>Joseph Ortiz</b>, Sajad Saeedi, Paul Kelly, Andrew J. Davison
+            </div>
+            <div>
+              <a href="https://rmurai.co.uk/projects/RobotWeb/">[Project Page]</a>
+              <a href="https://arxiv.org/abs/2202.03314">[Paper]</a>
+              <a href="https://www.youtube.com/watch?v=xQcYwONtMN0">[Demo Video]</a>
+            </div>
+          </div>
+        </div>
 
-                    <div class="col">
-                      <div class='paper-title'>
-                          A Robot Web for Distributed Many-Device Localisation
-                      </div>
-                      <div class='paper-desc'>
-                          TRO 2022
-                      </div>
-                      <div class='paper-authors'>
-                          Riku Murai, <b>Joseph Ortiz</b>, Sajad Saeedi, Paul Kelly, Andrew J. Davison
-                      </div>
-                      <div>
-                        <a href="https://rmurai.co.uk/projects/RobotWeb/">[Project Page]</a>
-                        <a href="https://arxiv.org/abs/2202.03314">[Paper]</a>
-                        <a href="https://www.youtube.com/watch?v=xQcYwONtMN0">[Demo Video]</a>
-                      </div>
-                    </div>
-                  </div>
+        <div class='row vspace-top'>
+          <div class="col-sm-3">
+            <img src='./static/imgs/incremental_abstraction.png' class='img-fluid'>
+          </div>
 
-                  <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img src='./static/imgs/incremental_abstraction.png' class='img-fluid'>
-                    </div>
+          <div class="col">
+            <div class='paper-title'>
+              Incremental Abstraction in Distributed Probabilistic SLAM Graphs
+            </div>
+            <div class='paper-desc'>
+              ICRA 2022
+            </div>
+            <div class='paper-authors'>
+              <b>Joseph Ortiz</b>, Talfan Evans, Edgar Sucar, Andrew J. Davison
+            </div>
+            <div>
+              <a href="https://joeaortiz.github.io/incremental_abstraction/">[Project Page]</a>
+              <a href="https://arxiv.org/abs/2109.06241">[Paper]</a>
+              <a href="https://www.youtube.com/watch?v=ZoJ9ylb4Ss8">[Video]</a>
+            </div>
+          </div>
+        </div>
 
-                    <div class="col">
-                      <div class='paper-title'>
-                          Incremental Abstraction in Distributed Probabilistic SLAM Graphs
-                      </div>
-                      <div class='paper-desc'>
-                          ICRA 2022
-                      </div>
-                      <div class='paper-authors'>
-                          <b>Joseph Ortiz</b>, Talfan Evans, Edgar Sucar, Andrew J. Davison
-                      </div>
-                      <div>
-                        <a href="https://joeaortiz.github.io/incremental_abstraction/">[Project Page]</a>
-                        <a href="https://arxiv.org/abs/2109.06241">[Paper]</a>
-                        <a href="https://www.youtube.com/watch?v=ZoJ9ylb4Ss8">[Video]</a>
-                      </div>
-                    </div>
-                </div>
+        <div class='row vspace-top'>
+          <div class="col-sm-3">
+            <img src='./static/imgs/imap.png' class='img-fluid'>
+          </div>
 
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img src='./static/imgs/imap.png' class='img-fluid'>
-                    </div>
+          <div class="col">
+            <div class='paper-title'>
+              iMAP: Implicit Mapping and Positioning in Real-Time
+            </div>
+            <div class='paper-desc'>
+              ICCV 2021
+            </div>
+            <div class='paper-authors'>
+              Edgar Sucar, Shikun Liu, <b>Joseph Ortiz</b>, Andrew J. Davison
+            </div>
+            <div>
+              <a href="https://edgarsucar.github.io/iMAP/">[Project Page]</a>
+              <a href="https://arxiv.org/abs/2103.12352">[Paper]</a>
+              <a href="https://www.youtube.com/watch?v=c-zkKGArl5Y">[Video]</a>
+              <!-- <a href="">[Code]</a> -->
+            </div>
+          </div>
+        </div>
 
-                    <div class="col">
-                      <div class='paper-title'>
-                          iMAP: Implicit Mapping and Positioning in Real-Time
-                      </div>
-                      <div class='paper-desc'>
-                          ICCV 2021
-                      </div>
-                      <div class='paper-authors'>
-                          Edgar Sucar, Shikun Liu, <b>Joseph Ortiz</b>, Andrew J. Davison
-                      </div>
-                      <div>
-                         <a href="https://edgarsucar.github.io/iMAP/">[Project Page]</a>
-                         <a href="https://arxiv.org/abs/2103.12352">[Paper]</a>
-                         <a href="https://www.youtube.com/watch?v=c-zkKGArl5Y">[Video]</a>
-                         <!-- <a href="">[Code]</a> -->
-                      </div>
-                    </div>
-                </div>
+        <div class='row vspace-top'>
+          <div class="col-sm-3">
+            <img src='./static/imgs/gbp_intro1.png' class='img-fluid'>
+          </div>
 
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img src='./static/imgs/gbp_intro1.png' class='img-fluid'>
-                    </div>
+          <div class="col">
+            <div class='paper-title'>
+              A visual introduction to Gaussian Belief Propagation
+            </div>
+            <div class='paper-desc'>
+              Self published / arXiv 2021
+            </div>
+            <div class='paper-authors'>
+              <b>Joseph Ortiz</b>, Talfan Evans, Andrew J. Davison
+            </div>
+            <div>
+              <a href="https://gaussianbp.github.io/">[Article]</a>
+              <a href="https://www.youtube.com/watch?v=ngzQxMgtCcg">[Intro Video]</a>
+              <!-- <a href="">[Code]</a> -->
+            </div>
+          </div>
+        </div>
 
-                    <div class="col">
-                      <div class='paper-title'>
-                          A visual introduction to Gaussian Belief Propagation
-                      </div>
-                      <div class='paper-desc'>
-                          Self published / arXiv 2021
-                      </div>
-                      <div class='paper-authors'>
-                          <b>Joseph Ortiz</b>, Talfan Evans, Andrew J. Davison
-                      </div>
-                      <div>
-                         <a href="https://gaussianbp.github.io/">[Article]</a>
-                         <a href="https://www.youtube.com/watch?v=ngzQxMgtCcg">[Intro Video]</a>
-                         <!-- <a href="">[Code]</a> -->
-                      </div>
-                    </div>
-                </div>
+        <div class='row vspace-top'>
+          <div class="col-sm-3">
+            <img src='./static/imgs/gbp_ba-cvpr.png' class='img-fluid'>
+          </div>
 
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img src='./static/imgs/gbp_ba-cvpr.png' class='img-fluid'>
-                    </div>
+          <div class="col">
+            <div class='paper-title'>
+              Bundle Adjustment on a Graph Processor
+            </div>
+            <div class='paper-desc'>
+              CVPR 2020
+            </div>
+            <div class='paper-authors'>
+              <b>Joseph Ortiz</b>, Mark Pupilli, Stefan Leutenegger, Andrew J. Davison
+            </div>
+            <div>
+              <a href="https://joeaortiz.github.io/ba_graph_processor/">[Project Page]</a>
+              <a href="https://arxiv.org/abs/2003.03134">[Paper]</a>
+              <a href="https://www.youtube.com/watch?v=TqeN8aQNgd0">[Video]</a>
+              <a href="https://github.com/joeaortiz/gbp-poplar">[Poplar Code]</a>
+              <a href="https://github.com/joeaortiz/gbp">[Python Code]</a>
+            </div>
+          </div>
+        </div>
 
-                    <div class="col">
-                      <div class='paper-title'>
-                          Bundle Adjustment on a Graph Processor
-                      </div>
-                      <div class='paper-desc'>
-                          CVPR 2020
-                      </div>
-                      <div class='paper-authors'>
-                          <b>Joseph Ortiz</b>, Mark Pupilli, Stefan Leutenegger, Andrew J. Davison
-                      </div>
-                      <div>
-                         <a href="https://joeaortiz.github.io/ba_graph_processor/">[Project Page]</a>
-                         <a href="https://arxiv.org/abs/2003.03134">[Paper]</a>
-                         <a href="https://www.youtube.com/watch?v=TqeN8aQNgd0">[Video]</a>
-                         <a href="https://github.com/joeaortiz/gbp-poplar">[Poplar Code]</a>
-                         <a href="https://github.com/joeaortiz/gbp">[Python Code]</a>
-                      </div>
-                    </div>
-                </div>
+        <div class='row vspace-top'>
+          <div class="col-sm-3">
+            <img src='./static/imgs/FutureMapping2.png' class='img-fluid'>
+          </div>
 
-                <div class='row vspace-top'>
-                    <div class="col-sm-3">
-                        <img src='./static/imgs/FutureMapping2.png' class='img-fluid'>
-                    </div>
+          <div class="col">
+            <div class='paper-title'>
+              FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+            </div>
+            <div class='paper-desc'>
+              arXiv 2019
+            </div>
+            <div class='paper-authors'>
+              Andrew J. Davison, <b>Joseph Ortiz</b>
+            </div>
+            <div>
+              <a href="https://arxiv.org/abs/1910.14139">[Paper]</a>
+            </div>
+          </div>
+        </div>
 
-                    <div class="col">
-                      <div class='paper-title'>
-                          FutureMapping 2: Gaussian Belief Propagation for Spatial AI
-                      </div>
-                      <div class='paper-desc'>
-                          arXiv 2019
-                      </div>
-                      <div class='paper-authors'>
-                          Andrew J. Davison, <b>Joseph Ortiz</b>
-                      </div>
-                      <div>
-                         <a href="https://arxiv.org/abs/1910.14139">[Paper]</a>
-                      </div>
-                    </div>
-                </div>
-
-                <br>
+        <br>
 
 
-                <div class='vspace-top'>
-                  <h1>Highlights</h1>
-              </div>
+        <div class='vspace-top'>
+          <h1>Highlights</h1>
+        </div>
 
-              <!--- List of news --->
+        <!--- List of news --->
 
-              <div class='row vspace-top-news'>
-                  <div class="col-sm-2 news-date">
-                      February 2023
-                  </div>
+        <div class='row vspace-top-news'>
+          <div class="col-sm-2 news-date">
+            February 2023
+          </div>
 
-                  <div class="col">
-                    I passed my <a href="https://joeaortiz.github.io/static/phd_thesis.pdf">PhD</a>! Thanks to the examiners <a href="https://dellaert.github.io/">Frank Dellaert</a> and <a href="https://mvdw.uk/">Mark van der Wilk</a>.
-                  </div>
-              </div>
+          <div class="col">
+            I passed my <a href="https://joeaortiz.github.io/static/phd_thesis.pdf">PhD</a>! Thanks to the examiners <a
+              href="https://dellaert.github.io/">Frank Dellaert</a> and <a href="https://mvdw.uk/">Mark van der
+              Wilk</a>.
+          </div>
+        </div>
 
-              <div class='row vspace-top-news'>
-                  <div class="col-sm-2 news-date">
-                      December 2022
-                  </div>
+        <div class='row vspace-top-news'>
+          <div class="col-sm-2 news-date">
+            December 2022
+          </div>
 
-                  <div class="col">
-                    I will be co-organising the workshop on <a href="https://sites.google.com/view/distributedgraphs/home">Distributed Graph Algorithms for Robotics</a> at ICRA 2023!
-                  </div>
-              </div>
+          <div class="col">
+            I will be co-organising the workshop on <a
+              href="https://sites.google.com/view/distributedgraphs/home">Distributed Graph Algorithms for Robotics</a>
+            at ICRA 2023!
+          </div>
+        </div>
 
-              <!-- <div class='row vspace-top-news'>
+        <!-- <div class='row vspace-top-news'>
                   <div class="col-sm-2 news-date">
                       March 2022
                   </div>
@@ -519,7 +571,7 @@
                   </div>
               </div> -->
 
-              <!-- <div class='row vspace-top-news'>
+        <!-- <div class='row vspace-top-news'>
                   <div class="col-sm-2 news-date">
                       January 2022
                   </div>
@@ -529,7 +581,7 @@
                   </div>
               </div> -->
 
-              <!-- <div class='row vspace-top-news'>
+        <!-- <div class='row vspace-top-news'>
                   <div class="col-sm-2 news-date">
                       August 2021
                   </div>
@@ -549,15 +601,16 @@
                   </div>
               </div> -->
 
-              <div class='row vspace-top-news'>
-                  <div class="col-sm-2 news-date">
-                      July 2021
-                  </div>
+        <div class='row vspace-top-news'>
+          <div class="col-sm-2 news-date">
+            July 2021
+          </div>
 
-                  <div class="col">
-                    Check out our distill style  <a href="https://gaussianbp.github.io/">Visual introduction to Gaussian Belief Propagation</a>.
-                  </div>
-              </div>
+          <div class="col">
+            Check out our distill style <a href="https://gaussianbp.github.io/">Visual introduction to Gaussian Belief
+              Propagation</a>.
+          </div>
+        </div>
 
         <!--       <div class='row vspace-top-news'>
                   <div class="col-sm-2 news-date">
@@ -569,7 +622,7 @@
                   </div>
               </div>
 -->
-<!--                 <div class='row vspace-top-news'>
+        <!--                 <div class='row vspace-top-news'>
                   <div class="col-sm-2 news-date">
                        March 2020
                   </div>
@@ -579,7 +632,7 @@
                   </div>
               </div> -->
 
-<!--                 <div class='row vspace-top-news'>
+        <!--                 <div class='row vspace-top-news'>
                   <div class="col-sm-2 news-date">
                       July 2019
                   </div>
@@ -589,7 +642,7 @@
                   </div>
               </div> -->
 
-<!--                 <div class='row vspace-top-news'>
+        <!--                 <div class='row vspace-top-news'>
                   <div class="col-sm-2 news-date">
                       July 2018
                   </div>
@@ -599,7 +652,7 @@
                   </div>
               </div> -->
 
-    <!--           <div class='row vspace-top-news'>
+        <!--           <div class='row vspace-top-news'>
                   <div class="col-sm-2 news-date">
                       June 2018
                   </div>
@@ -610,19 +663,19 @@
               </div> -->
 
 
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 
 
-    <div id='footer' class='vspace-top'>
-        <p>Page adapted from <a href="https://github.com/vsitzmann/vsitzmann.github.io">here</a>.</p>
+  <div id='footer' class='vspace-top'>
+    <p>Page adapted from <a href="https://github.com/vsitzmann/vsitzmann.github.io">here</a>.</p>
     <div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed  -->
-    <script src="./static/js/bootstrap.min.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins)  -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed  -->
+      <script src="./static/js/bootstrap.min.js"></script>
 </body>
 
 </html>
